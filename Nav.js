@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FontAwesome } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-//screens
+//HomeScreen and sample stack
 import HomeScreen from "./screens/HomeScreen";
 import StackScreen from "./screens/StackScreen";
 
