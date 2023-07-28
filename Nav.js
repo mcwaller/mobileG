@@ -7,13 +7,15 @@ import { FontAwesome } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 //HomeScreen and sample stack
 import HomeScreen from "./screens/HomeScreen";
-import StackScreen from "./screens/StackScreen";
+import AboutApp from "./screens/AboutApp";
+import Tables from "./screens/Tables";
 
 import SettingsScreen from "./screens/SettingsScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 
 const HomeStackNavigator = createNativeStackNavigator();
+const DashStackNavigator = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function MyStack() {
@@ -27,8 +29,24 @@ function MyStack() {
         component={HomeScreen}
         options={{ headerShown: false }}
       />
-      <HomeStackNavigator.Screen name="Stack" component={StackScreen} />
+      <HomeStackNavigator.Screen name="About" component={AboutApp} />
     </HomeStackNavigator.Navigator>
+  );
+}
+
+function MyDashboardStack() {
+  return (
+    <DashStackNavigator.Navigator
+      initialRouteName="DashboardScreen"
+      screenOptions={{ tabBarActiveTintColor: "#609966" }}
+    >
+      <DashStackNavigator.Screen
+        name="DashboardScreen"
+        component={DashboardScreen}
+        options={{ headerShown: false }}
+      />
+      <DashStackNavigator.Screen name="Table" component={Tables} />
+    </DashStackNavigator.Navigator>
   );
 }
 
@@ -36,7 +54,11 @@ function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      screenOptions={{ tabBarActiveTintColor: "#609966", headerShown: false }}
+      screenOptions={{
+        tabBarActiveTintColor: "#EDF1D6",
+        headerShown: false,
+        tabBarStyle: { backgroundColor: "#40513B" },
+      }}
     >
       <Tab.Screen
         name="Home"
@@ -59,7 +81,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Dashboard"
-        component={DashboardScreen}
+        component={MyDashboardStack}
         options={{
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="dashboard" color={color} size={size} />

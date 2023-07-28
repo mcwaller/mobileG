@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Stylesheet, TouchableOpacity } from "react-native";
 
-const StackScreen = () => {
+const AboutApp = () => {
   return (
     <View>
       <Text
@@ -11,9 +11,9 @@ const StackScreen = () => {
           marginTop: "20%",
         }}
       >
-        Dummy Title
+        What is this App?
       </Text>
     </View>
   );
 };
-export default StackScreen;
+export default AboutApp;
