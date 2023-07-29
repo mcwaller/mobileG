@@ -5,13 +5,14 @@ import { Ionicons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FontAwesome } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-//screens
+// screens
 import HomeScreen from "./screens/HomeScreen";
 import StackScreen from "./screens/StackScreen";
-
 import SettingsScreen from "./screens/SettingsScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import DashboardScreen from "./screens/DashboardScreen";
+import Registro from "./screens/Registro"; 
+import Login from "./screens/Login";
 
 const HomeStackNavigator = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -19,7 +20,7 @@ const Tab = createBottomTabNavigator();
 function MyStack() {
   return (
     <HomeStackNavigator.Navigator
-      initialRouteName="HomeScreen"
+      initialRouteName="Profile"
       screenOptions={{ tabBarActiveTintColor: "#609966" }}
     >
       <HomeStackNavigator.Screen
@@ -27,6 +28,7 @@ function MyStack() {
         component={HomeScreen}
         options={{ headerShown: false }}
       />
+     
       <HomeStackNavigator.Screen name="Stack" component={StackScreen} />
     </HomeStackNavigator.Navigator>
   );
@@ -82,6 +84,7 @@ function MyTabs() {
 export default function Navigation() {
   return (
     <NavigationContainer>
+      {/* Coloca aquí el componente MyTabs */}
       <MyTabs />
     </NavigationContainer>
   );
