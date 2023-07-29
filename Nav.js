@@ -29,7 +29,14 @@ function MyStack() {
         component={HomeScreen}
         options={{ headerShown: false }}
       />
-      <HomeStackNavigator.Screen name="About" component={AboutApp} />
+      <HomeStackNavigator.Screen
+        name="About"
+        component={AboutApp}
+        options={{
+          headerStyle: { backgroundColor: "#40513B" },
+          headerTintColor: "#EDF1D6",
+        }}
+      />
     </HomeStackNavigator.Navigator>
   );
 }
@@ -45,7 +52,14 @@ function MyDashboardStack() {
         component={DashboardScreen}
         options={{ headerShown: false }}
       />
-      <DashStackNavigator.Screen name="Table" component={Tables} />
+      <DashStackNavigator.Screen
+        name="Table"
+        component={Tables}
+        options={{
+          headerStyle: { backgroundColor: "#40513B" },
+          headerTintColor: "#EDF1D6",
+        }}
+      />
     </DashStackNavigator.Navigator>
   );
 }

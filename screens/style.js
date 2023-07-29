@@ -81,5 +81,17 @@ const style = StyleSheet.create({
   navBack: {
     backgroundColor: "#40513B",
   },
+  screenTitle: {
+    fontSize: 30,
+    textAlign: "center",
+    marginTop: "30%",
+    color: "#40513B",
+  },
+  screenSubTitle: {
+    fontSize: 30,
+    textAlign: "center",
+    marginTop: "15%",
+    color: "white",
+  },
 });
 export default style;

@@ -1,19 +1,22 @@
 import React from "react";
-import { View, Text, Stylesheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Stylesheet,
+  TouchableOpacity,
+  ImageBackground,
+} from "react-native";
+import style from "./style";
+const BackgroundImage = require("../assets/mountaindew.jpg");
 
 const AboutApp = () => {
   return (
-    <View>
-      <Text
-        style={{
-          fontSize: 30,
-          textAlign: "center",
-          marginTop: "20%",
-        }}
-      >
-        What is this App?
-      </Text>
-    </View>
+    <ImageBackground
+      source={BackgroundImage}
+      style={{ flex: 1, resizeMode: "cover" }}
+    >
+      <Text style={style.screenSubTitle}>What is this App?</Text>
+    </ImageBackground>
   );
 };
 export default AboutApp;

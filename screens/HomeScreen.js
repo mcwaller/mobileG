@@ -19,16 +19,7 @@ const HomeScreen = () => {
       style={{ flex: 1, resizeMode: "cover" }}
     >
       <View>
-        <Text
-          style={{
-            fontSize: 30,
-            textAlign: "center",
-            marginTop: "30%",
-            color: "#40513B",
-          }}
-        >
-          Home Page
-        </Text>
+        <Text style={style.screenTitle}>Home Page</Text>
       </View>
 
       <Image source={Logo} style={style.image} />

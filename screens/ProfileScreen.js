@@ -2,26 +2,21 @@ import React from "react";
 import {
   View,
   Text,
-  Stylesheet,
   TouchableOpacity,
   TextInput,
+  ImageBackground,
 } from "react-native";
 import style from "./style";
+const BackgroundImage = require("../assets/back.jpg");
 
 const ProfileScreen = () => {
   return (
-    <>
+    <ImageBackground
+      source={BackgroundImage}
+      style={{ flex: 1, resizeMode: "cover" }}
+    >
       <View>
-        <Text
-          style={{
-            fontSize: 30,
-            textAlign: "center",
-            marginTop: "20%",
-            marginBottom: "20%",
-          }}
-        >
-          Profile Page
-        </Text>
+        <Text style={style.screenTitle}>Profile Page</Text>
       </View>
 
       <View style={style.defaultContainer} elevation={5}>
@@ -33,7 +28,7 @@ const ProfileScreen = () => {
           <Text style={style.buttonText}>Submit</Text>
         </TouchableOpacity>
       </View>
-    </>
+    </ImageBackground>
   );
 };
 export default ProfileScreen;

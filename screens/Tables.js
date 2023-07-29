@@ -1,19 +1,16 @@
 import React from "react";
-import { View, Text, Stylesheet, TouchableOpacity } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
+import style from "./style";
+const BackgroundImage = require("../assets/mountaindew.jpg");
 
 const Tables = () => {
   return (
-    <View>
-      <Text
-        style={{
-          fontSize: 30,
-          textAlign: "center",
-          marginTop: "20%",
-        }}
-      >
-        Table Screen
-      </Text>
-    </View>
+    <ImageBackground
+      source={BackgroundImage}
+      style={{ flex: 1, resizeMode: "cover" }}
+    >
+      <Text style={style.screenSubTitle}>Table Screen</Text>
+    </ImageBackground>
   );
 };
 export default Tables;

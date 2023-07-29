@@ -1,19 +1,16 @@
 import React from "react";
-import { View, Text, Stylesheet, TouchableOpacity } from "react-native";
+import { Text, ImageBackground } from "react-native";
+import style from "./style";
+const BackgroundImage = require("../assets/back.jpg");
 
 const SettingsScreen = () => {
   return (
-    <View>
-      <Text
-        style={{
-          fontSize: 30,
-          textAlign: "center",
-          marginTop: "20%",
-        }}
-      >
-        Settings Page
-      </Text>
-    </View>
+    <ImageBackground
+      source={BackgroundImage}
+      style={{ flex: 1, resizeMode: "cover" }}
+    >
+      <Text style={style.screenTitle}>Settings Page</Text>
+    </ImageBackground>
   );
 };
 export default SettingsScreen;
